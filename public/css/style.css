@@ -199,12 +199,15 @@ main section{
 -----------------------------------------------------------*/
 .login-main, .register-main{
     width: 70%;
+    margin-bottom: 20px;
     /* border: 1px solid red; */
 }
-.login-main h2{
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
+.login-main section{
+    margin-bottom: 20px;
+}
+.login-form, .create-account-form{
+    padding-top: 30px;
+    /* border:1px solid red; */
 }
 .create-account-form, .login-form{
     width: 100%;
