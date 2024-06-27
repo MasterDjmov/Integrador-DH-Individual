@@ -4,12 +4,12 @@ const app = express();
 
 app.use(express.static('public'));
 
-const puerto=3000;
-app.listen(puerto,(error)=>{
+const port = process.env.PORT || 3001;
+app.listen(port,(error)=>{
     if(error){
         console.log("error:"+error)
 }else
-console.log("Server iniciado en localhot:"+puerto);   
+console.log("Server iniciado en localhot:"+port);   
 })
 
 app.get('/',(req,res)=>{
