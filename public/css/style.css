@@ -24,143 +24,415 @@ El departamento de diseño usó los íconos de este sitio:
 https://fontawesome.com/icons?d=gallery&m=free
 
 */
-/* OPCIONES GENERALES */
+/* OPCIONES GENERALES
+-----------------------------------------------------------
+---------------------------------------------------------*/
 *{
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', 'sans-serif';
+    background-color: #ebebeb;
+}
+.efecto-transition{
+    transition: 800ms;
 }
 
-html,body{
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-size: 12px;    /*aplico a todo*/
-}
 
-/* OPCIONES DE HEADER */
+/* HEADER
+-----------------------------------------------------------
+---------------------------------------------------------*/
 header{
     background-color: #EAC926;
+    padding: 20px;
+    /* border: 1px solid red; */
 }
-header p{
-    text-align: center;
-}
-header ul{
-    list-style-type: none;
-    padding: 0px;
-}
-header a{
-    text-decoration: none;
-}
-header .search_bar{
+
+.contenedor-header{
     display: flex;
-    gap: 5px;
-    align-items: center;
-
+    flex-wrap: wrap;
 }
-header .buger-menu {
-    font-size: 2em;
-    margin-bottom: 5px; /* Reducimos el margen inferior */
-    color: #1259c3;
-    text-align: center;
+.form-control{
+    display: flex;
+    flex-wrap: wrap;
+   align-items: baseline;
+   position: relative;
 }
-.banner{
-   
-    padding: 0px;
+.logo-header, .form-search{
+    width: 50%;
 }
-.banner img{
-    width: 100%;
+.search-input{
+    margin-left: 15px ;
+    width: 90%;
+    border-radius: 5px;
+    height: 35px;
+    border: none;
 }
-h3{
-    color:#666;
-    font-family: 'Roboto';
-}
-/* OPCIONES DE MAIN */
-main{
-    background-color: #ebebeb;
-}
-main section{
-    width: 90vw;
-    background-color: #ebebeb;
-    /*border:1px solid red;*/
-    margin:0 auto;
-
-}
-main section{
-    background-color: white;
-}
-main img{
-    width: 100%;
-}
-.ultima_visita article, .ofertas article{
-    text-align: center;
-    margin-bottom: 10px;
-    border:1px solid red;
-    
-}
-.ultima_visita .productos_logo{
-    width: 30px;
-    height: 20px;
-    border: 1px solid #39b54a;
-    color:#39b54a;
+.search-icon{
     padding-top: 10px;
-    border-radius: 30px;
-}
-.ultima_visita .ultima_visita_precio{
-    font-size: 18px;
-}
-.ultima_visita .ultima_visita_descuento{
-    font-size: 16px;
-    color:#39b54a;
-}
-.ultima_visita .ultima_visita_descripcion{
-    font-size: 16px;
-    color: #676565;
-}
-
-.ofertas .ofertas_precio{
-    font-size: 18px;
-}
-.ofertas .ofertas_descuento{
-    font-size: 16px;
-    color:#39b54a;
-}
-.ofertas .ofertas_descripcion{
-    font-size: 16px;
-    color: #676565;
-}
-/* -------------------------------------------------*/
-/* OPCIONES DE FOOTER */
-footer{
+    width: 30px;
+    height: 35px;
+    position: absolute;
+    right: 2px;
+    color:#666;
     background-color: white;
-    padding: 30px;
+    /* border: 1px solid red; */
+    padding: 3px;
+    padding-top: 10px;
+
 }
-footer article {
+.en-cuotas{
+    /* border: 1px solid red; */
     text-align: center;
+    margin: 30px;
+}
+.hamburguer-menu{
+    /* border: 1px solid red; */
+    display: block;
+    background-color: #1259c3;
+    color: white;
+    width: 45px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0px auto;
+    padding: 7px;
+}
+/*el menu estara oculto en movil*/
+.header-nav{
+    display: none;
+}
+.header-nav.active {
+    display: block;
+}
+.hamburguer-menu {
+    cursor: pointer;
+}
+.nav-bar a, .login-bar a{
+    text-decoration: none; /*le quito la viñeta*/
+    color: black;
+}
+.home-banner img{
+    width: 100%;
+}
+
+
+/* MAIN 
+-----------------------------------------------------------
+---------------------------------------------------------*/
+main{
+    /* border: 1px solid red; */
+    width: 90vw;                /*probando con 90%*/
+    margin: 0px auto;   
+    color:#666;        /*autocentrado*/
+    flex: 1; /*para que ocupe todo lo disponible en su altura*/
+    min-height: 600px;
+}
+main section{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    /*border: 1px solid red;*/
+    flex-wrap: wrap;
 }
-
-footer article p {
-    margin: 0px;
-}
-
-footer i{
-    font-size: 2em;
-    margin-bottom: 10px; /* Reducimos el margen inferior */
-    color: #1259c3;
-}
-footer .foo_titulares{
-    font-weight: bold;
+.tittle{
+    width: 100%;
     font-size: 24px;
-    color:#666
+    margin-bottom: 15px;
 }
-footer .foo_descripcion{
+.product-article{
+    /* border: 1px solid red; */
+    margin: 10px;
+}
+.product-article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    .product-truck-logo{
+        animation: rotate 0.3s forwards;
+    }
+    .descripcion{
+        visibility: visible;
+    }
+}
+
+.product-image{
+    width: 100%;
+}
+.product-details{
+    background-color: white;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    position: relative;   
+}
+.precio{
+    width: 30%;
+    font-size: 18px;
+}
+.descuento{
+    width: 70%;
     font-size: 16px;
-    color: #676565;
+    color: #39b54a;
 }
-.copy{
+.descripcion{
+    font-size: 16px;
     font-weight: bold;
-    color: #666;
+    visibility: hidden;/*reservo el lugar, pero oculto*/
+}
+/*ubicando el camion*/
+.product-truck-logo{
+    color: #39b54a;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;    /*no se vea lo de atras*/
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+/* PROCESO DE FORMULARIO 
+-----------------------------------------------------------
+-----------------------------------------------------------*/
+.login-main, .register-main{
+    width: 70%;
+    /* border: 1px solid red; */
+}
+.login-main h2{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.create-account-form, .login-form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.form-input{
+    border: 1px solid red;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.form-input:hover{
+    /* border: 1px solid lightcoral; */
+    background-color: rgb(253, 237, 239);
+}
+
+.form-div{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.name-div{
+    width: 49%;
+}
+
+.label-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.names-input{
+    width: 100%;
+}
+
+.interest-category-option, .user-profile-option{
+    width: 100%;
+    margin-top: 13px;
+}
+
+.button-form{
+    width: 49%;
+    padding: 10px;
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.btnEnviar{
+    background-color: #39b54a;
+}
+.button-form:hover{
+    background-color: #0022AA;
+}
+.btnEnviar:hover{
+    background-color: #4fb85d;
+}
+
+.login-button{
+    width: 100%;
+    padding: 10px;
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.login-button:hover{
+    background-color: #0022AA;
+}
+
+/* FOOTER
+-----------------------------------------------------------
+---------------------------------------------------------*/
+footer{
+    /* border: 1px solid red; */
+    color:#666; 
+    background-color: white;
+    padding: 40px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 0px;
+    /*lo ubico siempre abajo*/
+   
+}
+footer article{
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+
+}
+.copyright-footer{
+    text-align: center;
+    width: 100%;
+}
+.footer-icon{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.footer-icon:hover{
+    color: #0022AA;
+}
+.footer-text{
+    margin-bottom: 30px;
+}
+
+/* aqui aplico media query */
+/* TABLET */
+@media(min-width: 361px){
+    /* HEADER */
+    .hamburguer-menu{
+        display: none;
+    }
+
+    .contenedor-header{
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .logo-header, .form-search, .en-cuotas{
+        width: 30%;
+        /* border:1px solid red; */
+    }
+
+    .search-input{
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 90%;
+
+    }
+
+    .en-cuotas{
+        text-align: center;
+    }
+
+    .header-nav{
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+
+    .header-nav ul{
+        list-style: none;
+        display: flex;
+    }
+
+    .header-nav ul li{
+        margin: 0 6px;
+    }
+
+    /* MAIN */
+    main section{
+        justify-content: space-between;
+    }
+
+    .product-article{
+        /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+        width: 47%;
+    }
+
+    .descuento{
+        font-size: 1.1rem;
+    }
+
+    /* CREATE ACCOUNT FORM*/
+    .form-input{
+        padding: 15px;
+    }
+}
+
+/*DESKTOP*/
+@media (min-width: 769px){
+    /* HEADER */
+    .contenedor-header, .header-nav{
+        margin: auto;
+    }
+
+    .header-nav{
+        margin-top: 10px;
+    }
+
+    /* MAIN */
+    .product-article{
+        width: 23%;
+    }
+
+    /* FOOTER */
+    footer{
+        justify-content: space-between;
+    }
+    footer article{
+        width: 33%;
+        flex-grow: 1;
+        padding: 0 15px;
+    }
+
+    .copyright-footer{
+        text-align: left;
+    }
+}
+@media (min-width: 1400px){
+    .search-icon{
+        padding-top: 10px;
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        right: 20px;
+        color:#666;
+        background-color: white;
+        /* border: 1px solid red; */
+        padding: 3px;
+        padding-top: 10px;
+    
+    }
+}
+    /* HEADER */
+/*------------------------------------- ANIMATIONS -------------------------------------*/
+@keyframes rotate{
+    100%{
+        transform: rotate(-90deg);
+    }
 }
