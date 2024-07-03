@@ -323,7 +323,7 @@ footer article{
 
 /* aqui aplico media query */
 /* TABLET */
-@media(min-width: 361px){
+@media(min-width: 560px){
     /* HEADER */
     .hamburguer-menu{
         display: none;
@@ -374,7 +374,7 @@ footer article{
 
     .product-article{
         /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
-        width: 47%;
+        width: 40%;
     }
 
     .descuento{
@@ -388,7 +388,7 @@ footer article{
 }
 
 /*DESKTOP*/
-@media (min-width: 769px){
+@media (min-width: 600px){
     /* HEADER */
     .contenedor-header, .header-nav{
         margin: auto;
@@ -408,7 +408,7 @@ footer article{
         justify-content: space-between;
     }
     footer article{
-        width: 33%;
+        width: 50%;
         flex-grow: 1;
         padding: 0 15px;
     }
