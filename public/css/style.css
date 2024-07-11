@@ -378,7 +378,7 @@ footer article{
     }
 
     .descuento{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     /* CREATE ACCOUNT FORM*/
@@ -388,7 +388,7 @@ footer article{
 }
 
 /*DESKTOP*/
-@media (min-width: 600px){
+@media (min-width: 630px){
     /* HEADER */
     .contenedor-header, .header-nav{
         margin: auto;
@@ -400,7 +400,7 @@ footer article{
 
     /* MAIN */
     .product-article{
-        width: 23%;
+        width: 30%;
     }
 
     /* FOOTER */
@@ -430,5 +430,8 @@ footer article{
         padding: 3px;
         padding-top: 10px;
     
+    }
+    .product-article{
+        width: 20%;
     }
 }
