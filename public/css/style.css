@@ -226,7 +226,7 @@ main section{
 }
 .form-input:hover{
     /* border: 1px solid lightcoral; */
-    background-color: rgb(253, 237, 239);
+    background-color: white;
 }
 
 .form-div{
